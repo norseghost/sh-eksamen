@@ -2,6 +2,7 @@
 eksamen.pdf
 # or the data files
 data/
+literature/
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
