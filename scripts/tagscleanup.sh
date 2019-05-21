@@ -14,10 +14,9 @@ fi
 cp "${1}" old_"${1}" # make backup
 
 while read -r tag; do
-   echo ${tag,,} # lowercase 
-   # TODO: how do I chain these substitutions
-  # echo ${STDIN/gilette/gillette} | \ # fix misspelling
-  # echo ${STDIN/gillettecommercial/gilletead}
+   lower=${tag,,} # lowercase 
+   gillette=${lower/gilette/gillette} # fix misspelling
+   echo ${gillette/#gillettecommercial/gilletead}
 done < "$1" > clean_"${1}" # output to new file
 
 #echo ${1,,}
