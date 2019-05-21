@@ -3,6 +3,8 @@ eksamen.pdf
 eksamen.txt
 # or the literature
 litteratur/
+# dont keep non-clean data
+old_*/
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
