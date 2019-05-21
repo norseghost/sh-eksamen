@@ -1,7 +1,7 @@
 # I don't care about the output PDF
 eksamen.pdf
-# or the data files
-data/
+eksamen.txt
+# or the literature
 litteratur/
 ## Core latex/pdflatex auxiliary files:
 *.aux
