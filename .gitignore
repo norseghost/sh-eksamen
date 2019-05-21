@@ -4,7 +4,7 @@ eksamen.txt
 # or the literature
 litteratur/
 # dont keep non-clean data
-old_*/
+old_*
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
