@@ -16,7 +16,7 @@ cp "${1}" old_"${1}" # make backup
 while read -r tag; do
    lower=${tag,,} # lowercase 
    gillette=${lower/gilette/gillette} # fix misspelling
-   echo ${gillette/#gillettecommercial/gilletead}
+   echo ${gillette/#gillettecommercial/gillettead}
 done < "$1" > clean_"${1}" # output to new file
 
 #echo ${1,,}
