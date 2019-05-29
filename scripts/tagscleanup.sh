@@ -11,8 +11,6 @@ if [ ! -f ${1} ]; then
   exit 1
 fi
 
-cp "${1}" old_"${1}" # make backup
-
 while read -r tag; do
    lower=${tag,,} # lowercase 
    gillette=${lower/gilette/gillette} # fix misspelling
@@ -20,5 +18,4 @@ while read -r tag; do
    echo ${boycott/#gillettecommercial/gillettead}
 done < "$1" > clean_"${1}" # output to new file
 
-#echo ${1,,}
-#sed 's/gilette/gillette/g' >
+
