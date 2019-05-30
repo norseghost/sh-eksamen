@@ -9,8 +9,16 @@
 
 library("tidyverse")
 
-boycott_tags = read_lines("../data/clean_#boycottgillette_related_tags")
-boycott_table = table(boycott_tags, deparse.level = 0)
-boycott_sort = sort(boycott_table, decreasing = TRUE)
-boycott_tibble = enframe(boycott_sort, name = "tag", value = "count")
-boycott_tibble
+tagfile = read_lines("../data/clean_bestmen_tags")
+
+count_tags  <- function(tags) {
+    tag_table  <- table(tags, deparse.level = 0)
+    tag_tibble <-  enframe(tag_table, name = "tag", value = "count")
+}
+
+tags_counted  <- count_tags(tagfile) %>%
+    top_n(10, count) %>%
+    arrange(desc(count))
+
+print(tags_counted)
+
