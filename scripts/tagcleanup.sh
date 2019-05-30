@@ -12,10 +12,7 @@ if [ ! -f ${1} ]; then
 fi
 
 while read -r tag; do
-   lower=${tag,,} # lowercase 
-   gillette=${lower/gilette/gillette} # fix misspelling
-   boycott=${gillette/gilletteboycott/boycottgillette}
-   echo ${boycott/#gillettecommercial/gillettead}
+  echo ${tag,,} # lowercase 
 done < "$1" > clean_"${1}" # output to new file
 
 
